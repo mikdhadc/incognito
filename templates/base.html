@@ -1,9 +1,13 @@
 {% load static %}
 <html>
     <head>
-        <link rel="stylesheet" href="D:\Works\Django\projects\incognito\static\css\styles.css">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     </head>
     <body>
+        <a href="/msg_manager/"> Send Message </a> 
+        <a href="/msg_manager/view/"> View Message </a>
+        <a href="/user/login"> Login </a> 
+        <a href="/user/register"> Register</a> 
         {% block body %}
         {% endblock %}
     </body>

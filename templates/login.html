@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>Login</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+
+    <h4>{{ field.label_tag }}</h4>
+    {{ field }}
+    <h6>{{ field.errors }}</h6>
+
+    {% endfor %}
+    <input type="submit" >
+</form>
+{%endblock%}

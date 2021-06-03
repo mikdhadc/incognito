@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Register</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for field in form2 %}
+    <h4>{{ field.label_tag }}</h4>
+    {{ field }}
+
+    {% endfor %}
+
+    <input type="submit">
+</form>
+
+{% endblock %}
